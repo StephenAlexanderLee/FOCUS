@@ -4,6 +4,7 @@ functional ultrasound (fUS) analysis pipeline for visualizing cerebral blood vol
 ## Setup
 ### 1. Install Requirements
 1. Python 3.8.0
+2. numba, numpy, scipy, matplotlib, natsort, h5py
 
 <!-- CONTACT -->
 ## Author

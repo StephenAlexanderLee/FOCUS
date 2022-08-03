@@ -3,9 +3,11 @@ import h5py
 import matplotlib.pyplot as plt
 import matplotlib
 import numpy as np
+import os
+from matplotlib import animation
 
 from src.preprocessing import dataset
-from src.correlation.correlation_mapping import correlate
+from src.correlation import correlation_mapping
 
 
 class params:
@@ -63,7 +65,7 @@ DS.generate_CBV(P)
 DS.visualize(P,'CBV',scale1,scale2)
 
 # ----- generate correlation map ------- #
-CORR = correlate()
+CORR = correlation_mapping.correlate()
 
 # plot arguments
 scale1 = {'vmin':0, 'vmax': 0.05, 'cmap':'gray','extent':P.im_extent,'aspect':'auto', 'origin':'lower'}

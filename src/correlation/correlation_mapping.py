@@ -5,17 +5,7 @@ import matplotlib.pyplot as plt
 
 class correlate:
     def __init__(self):
-        pass
-    @jit(nopython = True)
-    def calc_r(s,A,v,w):
-        r = 0
-        r1 = r; r2 = r; r3 = r
-        for i in range(len(A)):
-            r1 += (s[v,w,i]-np.mean(s[v,w,:]))*(A[i]-np.mean(A))
-            r2 += (s[v,w,i]-np.mean(s[v,w,:]))**2
-            r3 += (A[i]-np.mean(A))**2
-        r = r1/(np.sqrt(r2)*np.sqrt(r3))
-        return r
+        self.id = 0
     def map_corr(self,data,params):
         map = np.zeros(params.imgsize)
         for v in range(params.imgsize[0]):
@@ -34,3 +24,14 @@ class correlate:
         cbar = fig.colorbar(im, ax = ax, fraction = 0.025, pad = 0.01)
         cbar.ax.set_ylabel('Correlation', rotation = 270, labelpad = 10)
         plt.show()
+
+@jit(nopython = True)
+def calc_r(s,A,v,w):
+    r = 0
+    r1 = r; r2 = r; r3 = r
+    for i in range(len(A)):
+        r1 += (s[v,w,i]-np.mean(s[v,w,:]))*(A[i]-np.mean(A))
+        r2 += (s[v,w,i]-np.mean(s[v,w,:]))**2
+        r3 += (A[i]-np.mean(A))**2
+    r = r1/(np.sqrt(r2)*np.sqrt(r3))
+    return r

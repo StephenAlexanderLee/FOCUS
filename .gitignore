@@ -1,1 +1,3 @@
-data/
+*.mat
+\dist
+\build
