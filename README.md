@@ -56,18 +56,21 @@ Parameters within the params class can be altered. Enter your data directory "<i
 class params:
     def __init__(self, data_type):
         self.data_type = data_type
-        self.data_directory = <insert-data-path-here> # data directory
-        self.save_directory = <insert-save-path-here> # save directory
-        self.AcqInfo = 'AcqInfo.mat'                  # acquisition parameters
-        self.save_videos = False                      # save generated videos
-        self.baseline_frames = 10                     # number of frames for baseline CBV calc
-        self.wn = 4                                   # window size for RF moving temporal average
-        self.filter_CBV = True                        # apply median filter to CBV
-        self.filt_size = 3                            # median filter size [CBV and correlation]
-        self.stimulation_length = 10                  # stimulation template duration
-        self.stimulation_start = 20                   # stimulation template start
-        self.threshold = 0.23                         # correlation threshold
+        self.data_directory = <insert-data-path-here>  # data directory
+        self.save_directory = <insert-save-path-here>  # save directory
+        self.AcqInfo = 'AcqInfo.mat'                   # acquisition parameters
+        self.save_videos = False                       # save generated videos
+        self.save_correlation = False                  # save correlation map
+        self.baseline_frames = 10                      # number of frames for baseline CBV calc
+        self.wn = 4                                    # window size for RF moving temporal average
+        self.filter_CBV = True                         # apply median filter to CBV
+        self.filt_size = 3                             # median filter size [CBV and correlation]
+        self.stimulation_length = 10                   # stimulation template duration
+        self.stimulation_start = 20                    # stimulation template start
+        self.threshold = 0.23                          # correlation threshold
     def initialize(self):
+        if not os.path.exists(self.save_directory):
+            os.mkdir(self.save_directory)
         # adjust plot parameters for whole session
         plt.rcParams['image.cmap'] = 'afmhot'
         Writer = animation.writers['ffmpeg']
