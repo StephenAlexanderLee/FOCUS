@@ -16,8 +16,8 @@ class params:
         self.data_directory = os.path.join(os.getcwd(),'data','raw', self.data_type)        # data directory
         self.save_directory = os.path.join(os.getcwd(),'data','processed', self.data_type)  # save directory
         self.AcqInfo = 'AcqInfo.mat'                                                        # acquisition parameters
-        self.save_videos = True                                                             # save generated videos
-        self.save_correlation = True                                                        # save correlation map
+        self.save_videos = False                                                            # save generated videos
+        self.save_correlation = False                                                       # save correlation map
         self.baseline_frames = 10                                                           # number of frames for baseline CBV calc
         self.wn = 4                                                                         # window size for RF moving temporal average
         self.filter_CBV = True                                                              # apply median filter to CBV
