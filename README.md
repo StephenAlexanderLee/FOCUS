@@ -23,7 +23,7 @@ python -m pip install focus*.whl
 
 <br>
 
-<img src="https://github.com/StephenAlexanderLee/fUS-imaging/blob/main/media/CBV_movie.gif" width="200" />
+<img src="https://github.com/StephenAlexanderLee/fUS-imaging/blob/main/media/CBV_movie.gif" width="40%" />
 
 ## Correlation map
 correlation is calculated as the pixel-by-pixel Pearson correlation with the stimulation signal template.
