@@ -30,7 +30,8 @@ correlation is calculated as the pixel-by-pixel Pearson correlation with the sti
 
 <br>
 
-![](https://github.com/StephenAlexanderLee/fUS-imaging/blob/main/media/correlation.svg)
+<img src="https://github.com/StephenAlexanderLee/fUS-imaging/blob/main/media/correlation.svg" width="75%" />
+
 
 
 ## Starting Code
