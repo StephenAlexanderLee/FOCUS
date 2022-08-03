@@ -9,7 +9,6 @@ from matplotlib import animation
 from src.preprocessing import dataset
 from src.correlation import correlation_mapping
 
-
 class params:
     def __init__(self, data_type):
         self.data_type = data_type
