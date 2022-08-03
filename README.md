@@ -1,4 +1,5 @@
-# fUS-imaging
+# FOCUS (fUS-imaging)
+## Functional Observation of the Cortex via UltraSound
 functional ultrasound (fUS) analysis pipeline for visualizing cerebral blood volume (CBV) changes and correlation
 
 ## Setup
@@ -12,16 +13,20 @@ functional ultrasound (fUS) analysis pipeline for visualizing cerebral blood vol
   numba==0.51.2
 
 ### 2. Installation
-1. download the distribtion file (haiku*.whl)
+1. download the distribution file (focus*.whl)
 2. install using pip
 ```python
-python -m pip install haiku*.whl
+python -m pip install focus*.whl
 ```
 
 ## Changes in hemodynamics as indicators of brain activation
 ![](https://github.com/StephenAlexanderLee/fUS-imaging/blob/main/media/CBV_movie.gif)
 
-<img src="https://github.com/StephenAlexanderLee/fUS-imaging/blob/master/media/CBV_movie.gif" width=40%>
+<br>
+
+## Correlation map
+correlation is calculated as the pixel-by-pixel Pearson correlation with the stimulation signal template.
+![](https://github.com/StephenAlexanderLee/fUS-imaging/blob/main/media/correlation.svg)
 
 <br>
 

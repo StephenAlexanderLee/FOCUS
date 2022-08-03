@@ -3,7 +3,7 @@ requires = ['hatchling']
 build-backend = 'hatchling.build'
 
 [project]
-name = "haiku"
+name = "focus"
 version = "0.1.0"
 authors = [{ name = "Stephen Alexander Lee", email = "stephenlee32904@gmail.com"}]
 readme = "README.md"
