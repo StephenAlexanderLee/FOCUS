@@ -3,12 +3,12 @@ requires = ['hatchling']
 build-backend = 'hatchling.build'
 
 [project]
-name = "haku"
+name = "haiku"
 version = "0.1.0"
 authors = [{ name = "Stephen Alexander Lee", email = "stephenlee32904@gmail.com"}]
 readme = "README.md"
 requires-python = ">=3.8"
-description = "High-resolution AngioarKitecture Ultrasound"
+description = "High-resolution imaging of the AngioarKitecture via Ultrasound"
 dependencies = [
 "h5py==2.10.0",
 "numpy==1.18.5",
