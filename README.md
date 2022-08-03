@@ -1,6 +1,6 @@
 # FOCUS (fUS-imaging)
 ## Functional Observation of the Cortex via UltraSound
-functional ultrasound (fUS) analysis pipeline for visualizing cerebral blood volume (CBV) changes and correlation
+functional ultrasound (fUS) analysis pipeline for visualizing cerebral blood volume (CBV) changes and correlation. Starter code is included (main.py) and described below.
 
 ## Setup
 ### 1. Install Requirements
