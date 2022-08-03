@@ -20,15 +20,18 @@ python -m pip install focus*.whl
 ```
 
 ## Changes in hemodynamics as indicators of brain activation
-![](https://github.com/StephenAlexanderLee/fUS-imaging/blob/main/media/CBV_movie.gif)
 
 <br>
+
+![](https://github.com/StephenAlexanderLee/fUS-imaging/blob/main/media/CBV_movie.gif)
 
 ## Correlation map
 correlation is calculated as the pixel-by-pixel Pearson correlation with the stimulation signal template.
-![](https://github.com/StephenAlexanderLee/fUS-imaging/blob/main/media/correlation.svg)
 
 <br>
+
+![](https://github.com/StephenAlexanderLee/fUS-imaging/blob/main/media/correlation.svg)
+
 
 ## Starting Code
 ### import the required modules (preprocessing and correlation are custom)
@@ -45,6 +48,9 @@ from src.correlation import correlation_mapping
 ```
 
 ### Initialize custom parameters and workspace
+Parameters within the params class can be altered. Enter your data directory "<insert-data-path-here>" and save directory to "<inter-save-path-here>".
+<br>
+
 ```python
 class params:
     def __init__(self, data_type):
