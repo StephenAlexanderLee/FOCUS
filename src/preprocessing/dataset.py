@@ -71,7 +71,9 @@ class dataset:
             cbar.ax.set_ylabel(r'$\Delta$ CBV/CBV', rotation = 270, labelpad = 10)
         ani = animation.FuncAnimation(fig, animate, frames=range(params.frames), init_func=init, repeat=True)
         if params.save_videos:
-            ani.save(filename=os.path.join(params.save_directory,'RFmovie'+ str(slice) +'.mp4'))
+            ani.save(filename=os.path.join(params.save_directory,type+'_movie.mp4'))
+            writergif = animation.PillowWriter(fps=30)
+            ani.save(filename=os.path.join(params.save_directory,type+'_movie.gif'), writer=writergif)
         plt.show()
     def filter_CBV(self,params):
         for i in range(params.frames):

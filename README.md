@@ -4,7 +4,12 @@ functional ultrasound (fUS) analysis pipeline for visualizing cerebral blood vol
 ## Setup
 ### 1. Install Requirements
 1. Python 3.8.0
-2. h5py==2.10.0, numpy==1.18.5, scipy==1.4.1, natsort==7.0.1, matplotlib==3.3.2, numba==0.51.2
+2. h5py==2.10.0,
+  numpy==1.18.5,
+  scipy==1.4.1,
+  natsort==7.0.1,
+  matplotlib==3.3.2,
+  numba==0.51.2
 
 ### 2. Installation
 1. download the distribtion file (haiku*.whl)
@@ -13,11 +18,12 @@ functional ultrasound (fUS) analysis pipeline for visualizing cerebral blood vol
 python -m pip install haiku*.whl
 ```
 
-## Basic Overview
+## Changes in hemodynamics as indicators of brain activation
+<img src="https://github.com/StephenAlexanderLee/fUS-imaging/data/processed/electric_stimulation/CBV_movie.gif" width=40%>
 
 
 ## Starting Code
-###import the required modules (preprocessing and correlation are custom)
+### import the required modules (preprocessing and correlation are custom)
 ```python
 import h5py
 import matplotlib.pyplot as plt
@@ -30,7 +36,7 @@ from src.preprocessing import dataset
 from src.correlation import correlation_mapping
 ```
 
-###Initialize custom parameters and workspace
+### Initialize custom parameters and workspace
 ```python
 class params:
     def __init__(self, data_type):
@@ -71,7 +77,7 @@ P = params('electric_stimulation')
 P.initialize()
 ```
 
-###Generate the dataset and visualize the raw data
+### Generate the dataset and visualize the raw data
 ```python
 # ----- generate dataset ------- #
 DS = dataset.dataset(P)
@@ -84,7 +90,7 @@ scale2 = {'vmin':-100, 'vmax': 100, 'alpha':1,'cmap':P.cmap,'extent':P.im_extent
 DS.visualize(P,'RF',scale1)
 ```
 
-###Generate CBV changes
+### Generate CBV changes
 ```python
 # calculate CBV
 DS.generate_CBV(P)
@@ -93,8 +99,8 @@ DS.generate_CBV(P)
 DS.visualize(P,'CBV',scale1,scale2)
 ```
 
-###Calculate correlation maps
-```
+### Calculate correlation maps
+```python
 # ----- generate correlation map ------- #
 CORR = correlation_mapping.correlate()
 

@@ -2,6 +2,7 @@ from numba import jit
 import numpy as np
 from scipy import signal
 import matplotlib.pyplot as plt
+import os
 
 class correlate:
     def __init__(self):
@@ -23,6 +24,9 @@ class correlate:
         ax.set_ylabel('mm',fontsize=16)
         cbar = fig.colorbar(im, ax = ax, fraction = 0.025, pad = 0.01)
         cbar.ax.set_ylabel('Correlation', rotation = 270, labelpad = 10)
+        if params.save_correlation:
+            plt.savefig(os.path.join(params.save_directory,'correlation.png'))
+            plt.savefig(os.path.join(params.save_directory,'correlation.svg'))
         plt.show()
 
 @jit(nopython = True)

@@ -16,7 +16,8 @@ class params:
         self.data_directory = os.path.join(os.getcwd(),'data','raw', self.data_type)        # data directory
         self.save_directory = os.path.join(os.getcwd(),'data','processed', self.data_type)  # save directory
         self.AcqInfo = 'AcqInfo.mat'                                                        # acquisition parameters
-        self.save_videos = False                                                            # save generated videos
+        self.save_videos = True                                                             # save generated videos
+        self.save_correlation = True                                                        # save correlation map
         self.baseline_frames = 10                                                           # number of frames for baseline CBV calc
         self.wn = 4                                                                         # window size for RF moving temporal average
         self.filter_CBV = True                                                              # apply median filter to CBV
@@ -25,6 +26,8 @@ class params:
         self.stimulation_start = 20                                                         # stimulation template start
         self.threshold = 0.23                                                               # correlation threshold
     def initialize(self):
+        if not os.path.exists(self.save_directory):
+            os.mkdir(self.save_directory)
         # adjust plot parameters for whole session
         plt.rcParams['image.cmap'] = 'afmhot'
         Writer = animation.writers['ffmpeg']
