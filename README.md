@@ -19,6 +19,8 @@ python -m pip install haiku*.whl
 ```
 
 ## Changes in hemodynamics as indicators of brain activation
+![](https://github.com/StephenAlexanderLee/fUS-imaging/blob/main/media/CBV_movie.gif)
+
 <img src="https://github.com/StephenAlexanderLee/fUS-imaging/blob/master/media/CBV_movie.gif" width=40%>
 
 <br>
