@@ -29,8 +29,6 @@ class params:
             os.mkdir(self.save_directory)
         # adjust plot parameters for whole session
         plt.rcParams['image.cmap'] = 'afmhot'
-        Writer = animation.writers['ffmpeg']
-        writer = Writer(fps = 60, metadata = dict(artist='Me'), bitrate = 1800)
         plt.rcParams['pdf.fonttype'] = 42
         plt.rcParams['ps.fonttype'] = 42
         new_rc_params = {'text.usetex': False,"svg.fonttype": 'none'}
