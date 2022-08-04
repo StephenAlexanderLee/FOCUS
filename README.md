@@ -5,12 +5,7 @@ functional ultrasound (fUS) analysis pipeline for visualizing cerebral blood vol
 ## Setup
 ### 1. Install Requirements
 1. Python 3.8.0
-2. h5py==2.10.0,
-  numpy==1.18.5,
-  scipy==1.4.1,
-  natsort==7.0.1,
-  matplotlib==3.3.2,
-  numba==0.51.2
+2. h5py, numpy, scipy, natsort, matplotlib, numba
 
 ### 2. Installation
 1. download the distribution file (focus*.whl)
@@ -96,7 +91,7 @@ P.initialize()
 ```
 
 ### Generate the dataset and visualize the raw data
-note: if you are running through anaconda/spyder interface, you can use ```%matplotlib qt5``` commands
+note: if you are running through anaconda/spyder interface, you can use ```%matplotlib qt5``` magic command
 ```python
 # ----- generate dataset ------- #
 DS = dataset.dataset(P)
