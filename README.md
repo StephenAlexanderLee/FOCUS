@@ -14,6 +14,8 @@ functional ultrasound (fUS) analysis pipeline for visualizing cerebral blood vol
 python -m pip install focus*.whl
 ```
 
+if using anaconda, install in the anaconda terminal
+
 ## Changes in hemodynamics as indicators of brain activation
 
 <br>
