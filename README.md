@@ -96,6 +96,7 @@ P.initialize()
 ```
 
 ### Generate the dataset and visualize the raw data
+note: if you are running through anaconda/spyder interface, you can use ```%matplotlib qt5``` commands
 ```python
 # ----- generate dataset ------- #
 DS = dataset.dataset(P)
