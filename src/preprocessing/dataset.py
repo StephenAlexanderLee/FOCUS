@@ -69,11 +69,11 @@ class dataset:
             im2 = ax.imshow(self.CBV[:,:,0],**imgarg2)
             cbar = fig.colorbar(im2, ax = ax, fraction = 0.025, pad = 0.01)
             cbar.ax.set_ylabel(r'$\Delta$ CBV/CBV', rotation = 270, labelpad = 10)
-        ani = animation.FuncAnimation(fig, animate, frames=range(params.frames), init_func=init, repeat=True)
+        self.ani = animation.FuncAnimation(fig, animate, frames=range(params.frames), init_func=init, repeat=True)
         if params.save_videos:
-            ani.save(filename=os.path.join(params.save_directory,type+'_movie.mp4'))
+            self.ani.save(filename=os.path.join(params.save_directory,type+'_movie.mp4'))
             writergif = animation.PillowWriter(fps=30)
-            ani.save(filename=os.path.join(params.save_directory,type+'_movie.gif'), writer=writergif)
+            self.ani.save(filename=os.path.join(params.save_directory,type+'_movie.gif'), writer=writergif)
         plt.show()
     def filter_CBV(self,params):
         for i in range(params.frames):

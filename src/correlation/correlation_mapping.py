@@ -29,7 +29,7 @@ class correlate:
             plt.savefig(os.path.join(params.save_directory,'correlation.svg'))
         plt.show()
 
-@jit(nopython = True)
+@jit(nopython = True, error_model='numpy')
 def calc_r(s,A,v,w):
     r = 0
     r1 = r; r2 = r; r3 = r

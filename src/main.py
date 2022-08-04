@@ -1,10 +1,8 @@
 
-import h5py
 import matplotlib.pyplot as plt
 import matplotlib
 import numpy as np
 import os
-from matplotlib import animation
 
 from src.preprocessing import dataset
 from src.correlation import correlation_mapping
